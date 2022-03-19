@@ -18,6 +18,10 @@ class InternetSpeedTwitterBot:
         self.upload_speed = ""
 
     def get_internet_speed(self):
+        """
+        Method runs internet speedtest and saves the upload and download speeds to this class. 
+        :return:
+        """
         # go to the speed test page and start the test
         self.driver.get("https://www.speedtest.net/")
         go_button = self.driver.find_element(By.XPATH, '//*[@id="container"]/div/div[3]/div/div/div/div[2]/div[3]/'
@@ -42,6 +46,10 @@ class InternetSpeedTwitterBot:
                                                                    'div[3]/div/div[2]/span').text
 
     def tweet_at_provider(self):
+        """
+        This method will log in to Twitter. Currently, it posts a tweet with your internet speed stats.
+        :return:
+        """
         # sign in to twitter
         self.driver.get("https://twitter.com/")
         time.sleep(5)
