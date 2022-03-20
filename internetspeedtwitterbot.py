@@ -19,7 +19,7 @@ class InternetSpeedTwitterBot:
 
     def get_internet_speed(self):
         """
-        Method runs internet speedtest and saves the upload and download speeds to this class. 
+        Method runs internet speedtest and saves the upload and download speeds to this class.
         :return:
         """
         # go to the speed test page and start the test
@@ -93,3 +93,6 @@ class InternetSpeedTwitterBot:
                                                        'div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/'
                                                        'div/div[2]/div[3]')
         tweet_btn.click()
+
+        self.driver.quit()
+        
