@@ -95,4 +95,3 @@ class InternetSpeedTwitterBot:
         tweet_btn.click()
 
         self.driver.quit()
-        
